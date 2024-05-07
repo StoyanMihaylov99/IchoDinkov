@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="js/scripts.js"></script>
+    <title>Галерия - Ичо Динков</title>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <style>
+        .container-gallery {
+            background: #f9f9f9;
+        }
+
+        .flex-column {
+            max-width: 260px;
+        }
+
+        img {
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="/">Ичо Динков</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Меню
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Начало</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/gallery">Галерия</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/services">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/contact">Контакти</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead" style="background-image: url('/img/home-sample.png')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <span class="subheading">Тук можете да видите, част от моята работа.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-gallery">
+    <div class="d-flex flex-row flex-wrap justify-content-center">
+        <div class="d-flex flex-column">
+            <img src="/img/icho's photo/Screenshot 2024-05-07 115224.png" class="img-fluid-gallery" alt="Table Full of Spices">
+            <img src="/img/icho's photo/2.png" class="img-fluid-gallery" onclick="zoomImage(this)">
+        </div>
+        <div class="d-flex flex-column">
+            <img src="/img/icho's photo/4.png" class="img" onclick="zoomImage(this)">
+            <img src="/img/icho's photo/4.png" class="img" onclick="zoomImage(this)">
+        </div>
+        <div class="d-flex flex-column">
+            <img src="/img/icho's photo/5.png" class="img" onclick="zoomImage(this)">
+            <img src="/img/icho's photo/6.png" class="img" onclick="zoomImage(this)">
+        </div>
+        <div class="d-flex flex-column">
+            <img src="/img/icho's photo/7.png" class="img" onclick="zoomImage(this)">
+            <img src="/img/icho's photo/8.png" class="img" onclick="zoomImage(this)">
+        </div>
+        <div class="d-flex flex-column">
+            <img src="/img/icho's photo/9.png" class="img" onclick="zoomImage(this)">
+            <img src="/img/icho's photo/10.png" class="img" onclick="zoomImage(this)">
+        </div>
+    </div>
+    <!-- Modal for zoomed image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="zoomedImg">
+    </div>
+</div>
+
+<!-- Footer-->
+<footer class="border-top">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/ichodinkov/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/icho.dinkov">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="small text-center text-muted fst-italic">Copyright &copy; <a
+                        href="https://github.com/StoyanMihaylov99">Stoyan Mihaylov 2024</a></div>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+</body>
+</html>
