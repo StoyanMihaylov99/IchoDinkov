@@ -4,6 +4,7 @@ import jakarta.mail.MessagingException;
 import org.example.ichodinkov.services.EmailService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 @RequestMapping("/contact")
@@ -21,14 +22,14 @@ public class ContactController {
 
     @PostMapping("")
     @ResponseBody
-    public String submitForm(@RequestParam("name") String name,
+    public RedirectView submitForm(@RequestParam("name") String name,
                              @RequestParam("email") String email,
                              @RequestParam("message") String message,
                              @RequestParam("phone") String phone) throws MessagingException {
 
         emailService.sendEmail(name,email,message,phone);
 
-        return "index.html";
+        return new RedirectView("/", true);
 
     }
 }

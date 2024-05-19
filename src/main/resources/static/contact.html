@@ -61,9 +61,9 @@
                                     <div class="invalid-feedback" data-sb-feedback="email:email">Невалиден имейл.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input class="form-control" id="phone" type="tel" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Enter your phone number..." data-sb-validations="required" />
+                                    <input class="form-control" id="phone" type="tel" name="phone" maxlength="13" placeholder="Enter your phone number..." data-sb-validations="required" />
                                     <label for="phone">Вашият номер</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Zадължителен.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Задължителен.</div>
                                 </div>
                                 <div class="form-floating">
                                     <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
@@ -71,24 +71,27 @@
                                     <div class="invalid-feedback" data-sb-feedback="message:required">Задължително.</div>
                                 </div>
                                 <br />
-                                <!-- Submit success message-->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        To activate this form, sign up at
-                                        <br />
-                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Изпрати</button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Поздравления</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Успешно изпратихте запитването си, скоро ще се свържа с вас!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Върни се към началото</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                                <!-- Submit Button-->
-                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Изпрати</button>
+
                             </form>
                         </div>
                     </div>

@@ -36,6 +36,23 @@ function closeModal() {
     modal.style.display = "none";
 }
 
+// Function to display the popup
+function showPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+// Attach a click event listener to the submit button
+document.getElementById("submitBtn").addEventListener("click", function() {
+    showPopup();
+    // Here, you can add the code to handle the submission (e.g., AJAX request to the backend).
+});
+
+
 
 
 
