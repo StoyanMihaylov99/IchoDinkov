@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmailService {
-    private final String  EMAIL_RECEIVER = "stoqn.business@gmail.com";
+    private final String  EMAIL_RECEIVER = "idinkov4@gmail.com";
     private MailSender mailSender;
     private SimpleMailMessage templateMessage;
 
