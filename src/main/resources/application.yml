@@ -1,3 +1,10 @@
 spring:
   server:
     port: 8080
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+
+upload:
+  directory: C:\Users\stoqn\OneDrive\Documents\ichoDinkov\src\main\resources\static\img\icho's photo

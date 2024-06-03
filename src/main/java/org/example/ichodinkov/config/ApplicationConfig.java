@@ -3,6 +3,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
 import java.util.Properties;
 
@@ -29,6 +30,12 @@ public class ApplicationConfig {
         templateMessage.setFrom("icho.websender@gmail.com");
         templateMessage.setSubject("Запитване");
         return templateMessage;
+    }
+
+
+    @Bean
+    public StandardServletMultipartResolver multipartResolver() {
+        return new StandardServletMultipartResolver();
     }
 
 
