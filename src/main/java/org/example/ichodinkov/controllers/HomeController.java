@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    @Value("${upload.directory}")
-    private String uploadDir;
-
     @GetMapping("/")
     public String home(){
         return "index.html";
